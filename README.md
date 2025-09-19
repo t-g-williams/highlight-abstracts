@@ -2,7 +2,7 @@
 
 An R utility to color-highlight keyword groups in a set of titles/abstracts/keywords exported from Scopus.
 
-Here is an example output:
+As an example, here is the output for a single abstract:
 <img src="example.png" alt="Example" width="800" style="display:block;margin:auto;">
 
 
@@ -15,7 +15,7 @@ This file has served two purposes for me throughout the literature review proces
 2. **Making abstract screening faster:** When doing abstract screening, you need to quickly make a call about whether each result might meet your inclusion criteria. Making your keywords "pop" makes this a LOT faster, as you can more quickly find the relevant information.
 
 **Note:** There are online tools (e.g. Rayyan) that are designed to help with abstract screening and also utilise AI in some ways. 
-I experimented with these, but didn't like it for some reason. I also didn't want to become dependent on an unknown software or locked-in to needing to pay for the premium version. 
+I experimented with these, but found them clunky. It also felt like it took some power out of my hands, and I didn't want to become dependent on an unknown software or locked-in to needing to pay for the premium version at a later stage. 
 So I made this tool for myself. Maybe you find it useful too.
 
 ## Inputs
