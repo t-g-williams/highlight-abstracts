@@ -2,7 +2,7 @@
 
 An R utility to color-highlight keyword groups in a set of titles/abstracts/keywords exported from Scopus.
 
-As an example, here is the output for a single abstract:
+As an example, here is the search terms from my literature review and the output for a single abstract:
 <img src="example.png" alt="Example" width="800" style="display:block;margin:auto;">
 
 
@@ -22,27 +22,27 @@ So I made this tool for myself. Maybe you find it useful too.
 - A CSV file export of your query from Scopus (including abstracts!)
 
 ## Outputs
-- A HTML page with color-highlighted titles/abstracts/keywords + links
+- A HTML file with color-highlighted titles/abstracts/keywords and hyperlinks for all of your Scopus results. An example is in the `example_outputs/` directory here.
 
 ## Instructions
 1. Get your Scopus CSV export:
-- Run your search in Scopus
-- Click Export > CSV
-- Increase the document number so all results are exported
-- Select the group "Abstract & keywords" in addition to the pre-selected fields
-- Click export
-- Move the file to the same directory as this code.
+    - Run your search in Scopus
+    - Click Export > CSV
+    - Increase the document number so all results are exported
+    - Select the group "Abstract & keywords" in addition to the pre-selected fields
+    - Click export
+    - Move the file to the same directory as this code.
 
 2. Specify the `main()` function in the R file:
-- Specify your Scopus search terms. These are grouped into the different clauses from your search (e.g. I have a query that is structured like (model terms) AND (agrifood terms) AND (market terms) AND (env terms))
-- Assign desired colors to each search term group
-- Specify your working directory and the name of your Scopus CSV file
-- Optional settings: (a) shuffle the abstract order; (b) run for a subset of the abstracts (for testing/debugging)
+    - Specify your Scopus search terms. These are grouped into the different clauses from your search (e.g. I have a query that is structured like (model terms) AND (agrifood terms) AND (market terms) AND (environmental terms))
+    - Assign desired colors to each search term group
+    - Specify your working directory and the name of your Scopus CSV file
+    - Optional settings: (a) shuffle the abstract order; (b) run for a subset of the abstracts (for testing/debugging)
 
-3. Run the file and check the output in `outputs/scopus_bolded.html` :-)
+3. Run the `highlight_abstracts.R` file and check the output in `outputs/scopus_bolded.html` :-)
 
 
 ## Caveats
-- The code allows for a wildcard ("\*") in a search term (e.g. "analys\*" will match with "analysis", "analyses" etc.), but does not work with some fancier Scopus things like (w/n) (i.e. search terms within a number of words of each other)
-- Also, I think scopus does some behind-the-scenes English generalisation - e.g. if you write "analyse", scopus will also check "analyze". This code does not do that, so you'll have to do that yourself manually here by adding extra keywords.
+- The code allows for a wildcard ("\*") in a search term (e.g. "analys\*" will match with "analysis", "analyses" etc.), but does not work with some fancier Scopus things like ("w/n") (i.e. search terms within a number of words of each other)
+- Also, I think Scopus does some behind-the-scenes English generalisation - e.g. if you write "analyse", scopus will also check "analyze". This code does not do that, so you'll have to do that yourself manually here by adding extra keywords.
 - I do not promise that this file works universally. You might need to modify some things to fit your needs.
